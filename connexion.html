@@ -8,7 +8,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Bike test Gryon - Accueil</title>
+	<title>Bike test Gryon - Programme</title>
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="css/reset.css" />
@@ -26,73 +26,75 @@
 
 		<!-- navbar -->
 		<div class="topnav" id="myTopnav">
-			<div class="fixed-header">
-				<a href="index.html" class="active">
-					<img src="images/logo/logo.png" alt="">
-				</a>
-				<a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;
-				</a>
-			</div>
-
-			<a href="index.html" class="textlink menu1">Présentation</a>
+			<a href="index.html" class="active">
+				<img src="images/logo/logo.png" alt=""></a>
+			<a href="index.html" class="textlink">Présentation</a>
 			<a href="programme.html" class="textlink">Programme</a>
 			<a href="marques.html" class="textlink">Marques</a>
 			<a href="reservation.html" class="textlink">Réservation</a>
 			<a href="contact.html" class="textlink">Contact</a>
-
+			<a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;
+			</a>
 		</div>
 
-		<div id="home"></div>
-
 		<!-- coming soon -->
-		<div class="bgimg">
-
-			<div class="middle">
-				<h1>Prochaine édition</h1>
-				<p id="demo"></p>
+		<div class="titre">
+			<div class="titrage">
+				<h1>Connexion</h1>
 			</div>
-
 		</div>
 	</header>
 
-	<div class="buttons">
-		<a href="inscription.html"><button class="login">Inscription</button></a>
 
-		<a href="connexion.html"><button class="login">Connexion</button></a>
+	<!-- bouton retour -->
+	<div class="goback2">
+		<a href="index.html" class="textlink">retour</a>
 	</div>
 
-	<hr class="lignes">
+
 	<div class="info">
-		<h1>Présentation</h1>
-		<p>Le test à lieu sur la place de Barboleuse, entre Gryon et Villars dans les Alpes Vaudoises. <br><br>Les inscriptions se font sur-place ou en ligne, n'oublie pas une pièce d'identité.<br><br> Plus de 35 marques et 500 vélos-test, y compris
-			des vélos à assistance éléctrique (VAE) sont à ta disposition. <br><br>Plusieurs parcours sont spécialement balisés pour le test.</p><br>
-		<p class="age">ATTENTION: L'age minimum pour rouler avec un vélo à assistance électrique est de 14 ans.
-		</p>
-	</div>
-	<hr>
-	<div class="comment">
-		<h1>Comment ça marche?</h1>
-		<h5>1. S'inscrire à l'accueil et payer le prix de la journée en cash ou avec carte de crédit.
-			<p>Vous recevrez un bracelet à presenter sur les stands.</p>
-			<br><br>
-			2. Aller sur un stand, choisir un vélo ou se faire conseiller.
-			<br><br>
-			3. Donner sa carte d'identité en échange du vélo à tester.
-			<br><br>
-			4. Mettre son casque et tester le vélo sur un des parcours. Le rapporter après 1 descente ou 1 boucle.
-			<br><br>
-			5. Répeter l'operation depuis le point no 2 avec un autre vélo.</h5>
+		<h1>Connexion</h1>
+		<p>Connecte toi pour voir les vélos que tu as déjà réservé ou pouvoir réserver des vélos.
 	</div>
 
-	<hr>
+	<!-- connexion -->
+	<div class="connexion">
 
-	<div class="tarifs">
-		<h1>Combien ça coûte?</h1>
-		<h5>Prix pour 1 jours de test: 20.-</h5>
-		<p>Adultes et ado dès 14 ans(avec autorisation des parents)</p>
-		<h6>Pour la télécabine vous pouvez utiliser le Magic Pass, la Free Access Card ou acheter une carte journalière à 20.-</h6>
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-login">
+				<div class="panel-heading">
+					<a href="#" class="active" id="login-form-link">Se connecter</a>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">
+
+
+							<!--  LOGIN AREA -->
+							<form id="login-form" action="/finalProject/LoginServ" method="post" style="display: block;">
+								<div class="form-group">
+									<input type="text" name="username" id="username" tabindex="1" class="form-control jQKeyboard" placeholder="Nom d'utilisateur" value="">
+								</div>
+								<div class="form-group">
+									<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Mot de passe">
+								</div>
+								<div class="form-group">
+
+									<div class="col-sm-6 col-sm-offset-3">
+										<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Connexion">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="oublier">
+			<h2>mot de passe oublié ?</h2>
+		</div>
 	</div>
-
 
 
 	<!-- footer -->
@@ -105,7 +107,20 @@
 			&copy; Copyright 2021 Nicolas fukami
 		</p>
 	</div>
+	<!-- grille horraire-->
+	<!-- <div class="horraire">
 
+
+			<div id="jours">
+				<ul> -->
+	<!-- La classe définissant le jour doit toujours être en deuxième position -->
+	<!-- <li class="filter vendredi active">Vendredi</li>
+					<li class="filter samedi">Samedi</li>
+					<li class="filter dimanche">Dimanche</li>
+				</ul>
+			</div>
+			<div id="timetable" class="timetable"></div>
+		</div> -->
 
 	<!--[if lt IE 7]>
       <p class="browsehappy">
@@ -153,7 +168,11 @@
 			}
 		}
 	</script>
-
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
 </body>
 
 </html>
