@@ -33,12 +33,13 @@
 				<a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;
 				</a>
 			</div>
-
-			<a href="index.html" class="textlink menu1">Présentation</a>
-			<a href="programme.html" class="textlink">Programme</a>
-			<a href="marques.html" class="textlink">Marques</a>
-			<a href="reservation.html" class="textlink">Réservation</a>
-			<a href="contact.html" class="textlink">Contact</a>
+			<nav id="nav">
+				<a href="index.html" class="textlink menu1">Présentation</a>
+				<a href="programme.html" class="textlink">Programme</a>
+				<a href="marques.html" class="textlink">Marques</a>
+				<a href="reservation.html" class="textlink">Réservation</a>
+				<a href="contact.html" class="textlink">Contact</a>
+			</nav>
 
 		</div>
 
@@ -145,11 +146,17 @@
 	</script>
 	<script>
 		function myFunction() {
+			let nav = document.getElementById("nav");
+			console.log(nav)
 			var x = document.getElementById("myTopnav");
+
 			if (x.className === "topnav") {
+				nav.className += " active";
 				x.className += " responsive";
 			} else {
 				x.className = "topnav";
+				nav.className -= " nav";
+
 			}
 		}
 	</script>

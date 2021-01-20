@@ -141,6 +141,7 @@ function drawTimetable(day) {
 
 let limit = document.getElementsByClassName("bgimg")[0];
 let target = document.getElementsByClassName("fixed-header")[0]
+
 //console.log(limit.scrollTop);
 
 document.addEventListener('scroll', (e) => {

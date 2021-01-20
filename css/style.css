@@ -22,6 +22,23 @@ header {
     z-index: 10000;
 }
 
+nav {
+    display: flex;
+    height: 13rem;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+nav.active {
+    background-color: #333367;
+}
+
+nav a {
+    height: 20px;
+    display: none;
+}
+
 .topnav {
     overflow: hidden;
     background-color: transparent;
@@ -68,9 +85,7 @@ header {
     text-align: center !important;
 }
 
-.topnav a.textlink.menu1 {
-    padding-top: 6.2rem;
-}
+.topnav a.textlink.menu1 {}
 
 .topnav.responsive .icon {
     position: absolute;
@@ -101,7 +116,7 @@ header {
 
 /* button login & sign in */
 .buttons {
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
 }
 
@@ -660,7 +675,7 @@ padding: 26px;
 }
 
 .marqueselect {
-    padding: 0rem 2rem 8rem 2rem;
+    padding: 0rem 37rem 8rem 37rem;
     min-height: calc(100vh - 16rem - 78px);
 }
 
@@ -859,6 +874,28 @@ input:hover {
 }
 
 @media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        z-index: 0;
+    }
+
+    .topnav.responsive a {
+        z-index: 0;
+    }
+
+    nav a {
+        z-index: 0;
+    }
+
+    nav.active {
+        padding-top: 3rem;
+        margin-bottom: 10rem;
+    }
+
+    .fixed-header {
+        z-index: 1;
+    }
+
     .topnav {
         overflow: hidden;
         background-color: transparent;
@@ -924,7 +961,6 @@ input:hover {
         display: block;
         text-align: left;
         background-color: #333367;
-        z-index: 1000;
     }
 
     .topnav.responsive a.icon {
